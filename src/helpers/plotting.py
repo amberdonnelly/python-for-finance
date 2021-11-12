@@ -58,11 +58,18 @@ def plot_return_mult_stocks(investment, stock_df):
     mult_ret_df = (stock_df / stock_df.iloc[0] * investment)
     tickers = mult_ret_df.columns.to_numpy()
 
+    dates = mult_ret_df[tickers[0]].index.to_numpy()
+    dates = [pd.to_datetime(str(date)) for date in dates]
+    dates = [date.strftime('%Y.%m.%d') for date in dates]
+
     df_np = mult_ret_df.to_numpy()
 
     fig = plt.figure(figsize=(12,8), dpi=100)
     axes = fig.add_axes([0.1,0.1,0.85,0.85])
     axes.grid(True, color='0.6', dashes=(5,2,1,2))
+    axes.xaxis.set_ticks(range(df_np.shape[0]))
+    axes.set_xticklabels(dates)
+    axes.xaxis.set_major_locator(plt.MaxNLocator(8))
     axes.plot(df_np)
     axes.legend(tickers, loc ="upper left")
 

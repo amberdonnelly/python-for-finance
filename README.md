@@ -22,5 +22,9 @@ python src/main.py
 ```
 CSV's will be saved to the `data` folder, plots will be saves to the `plots` folder.
 
+Example plot showing how much value per stock option you would have after 1 year if you invested $100 in any of of FB, AMZN, AAPL, NFLX, GOOG.
+
+![investment plot](./images/invest100_FB-AMZN-AAPL-NFLX-GOOG.png)
+
 Future goals:
 - implement a user-friendly web-app to make use of the python analysis backend
