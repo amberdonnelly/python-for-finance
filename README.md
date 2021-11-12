@@ -17,7 +17,7 @@ source myvenv/bin/activate
 
 pip install -r requirements.txt
 
-python src/<X>-python-for-finance.py
+python src/main.py
 ```
 CSV's will be saved to the `data` folder, plots will be saves to the `plots` folder.
 
