@@ -9,6 +9,7 @@ Technologies:
     - matplotlib
     - numpy
     - pandas
+    - pyramid
 
 To run:
 ```

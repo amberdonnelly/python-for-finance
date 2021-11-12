@@ -3,3 +3,4 @@ mplfinance
 numpy
 pandas
 pandas-datareader
+pyramid
